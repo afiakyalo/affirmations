@@ -22,7 +22,7 @@ gem "jbuilder"
 gem 'ruby-openai'
 gem 'pry', '~> 0.14.1'
 gem 'dotenv-rails'
-gem 'bootstrap', '~> 5.1.3'
+gem 'bootstrap', '~> 5.3.3'
 gem 'bootstrap-sass', '~> 3.4.1'
 gem 'sassc-rails', '>= 2.1.0'
 
