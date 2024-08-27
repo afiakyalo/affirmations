@@ -24,7 +24,7 @@ Things you may want to cover:
 * ...
 
 To Do:
-- Fix next affirmation dynamic loading by clicking anywhere on the page. Maybe use React
+- Fix next affirmation dynamic loading by clicking anywhere on the page. Maybe use React?
 - Deploy to heroku
 - Document on Readme
 - Use bootstrap for CSS (look at other styling frameworks)
