@@ -1,36 +1,34 @@
-# README
+# Affirmations
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Description
 
-Things you may want to cover:
+Affirmations is a small Ruby project aimed at bringing joy and some confidence to any user
+ - When loaded, the user sees a single affirmation
+ - Refreshing the page displays another affirmation
 
-* Ruby version
+## Table of Contents
+- [Getting Set Up](#getting-set-up)
+- [Must Haves To Do list](#must-haves-to-do-list)
+- [Deployment](#deployment)
 
-* System dependencies
+## Getting Set Up
+1. Clone repo: `git clone https://github.com/afiakyalo/affirmations.git`
 
-* Configuration
+2. The application is running on   `rails  >= 7.2.1` and `ruby 3.3.4`.
 
-* Database creation
+3. Instal ruby gems by running `bundle install`. Possible issues to look out for: 
+ - **pg** - May require individual installation with additional arguments, see the following reference for more details: [Reference](https://michaelrigart.be/install-pg-ruby-gem-without-postgresql/). If you installed postgres via brew, try `gem install pg -- --with-pg-config=/usr/local/Cellar/postgresql@12/12.4_1/bin/pg_config`.
 
-* Database initialization
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-To Do:
-- Fix next affirmation dynamic loading by clicking anywhere on the page. Maybe use React?
-- Deploy to heroku
+## Must Haves To Do list
+- Fix next affirmation dynamic loading by clicking anywhere on the page. Option to use React here. 
+- Add tests
+- Deploy to Heroku
 - Document on Readme
-- Use bootstrap for CSS (look at other styling frameworks)
-- Cleanup unused code
+- Use Bootstrap/MUI for CSS 
+- Cleanup code
 
-Nice-to-have:
-- Centered affirmation with image on half of page
+Nice-to-haves:
+- Centered affirmation with static image on half of page
 - Optimize for different screen sizes
 
