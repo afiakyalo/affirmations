@@ -1,6 +1,6 @@
 [build]
   # Command to build your application
-  command = "npm install && npm run build"
+  command = "apt-get update && apt-get install -y build-essential libpq-dev && npm install && npm run build"
   
   # Directory where the built files are located (update this if it's different in your project)
   publish = "build" 
