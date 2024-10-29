@@ -25,6 +25,7 @@ gem 'dotenv-rails'
 gem 'bootstrap', '~> 5.1.3'
 gem 'bootstrap-sass', '~> 3.4.1'
 gem 'sassc-rails', '>= 2.1.0'
+gem 'bigdecimal'
 
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
