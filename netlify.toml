@@ -1,0 +1,18 @@
+[build]
+  # Command to build your application
+  command = "npm install && npm run build"
+  
+  # Directory where the built files are located (update this if it's different in your project)
+  publish = "build" 
+
+  # Node version (optional) - specify your Node version if necessary
+  environment = { NODE_VERSION = "16.15.0" }
+
+# Add any environment variables required for your project
+  [build.environment]
+
+[[redirects]]
+  # Example redirect (optional): redirect all 404s to the index
+  from = "/*"
+  to = "/index.html"
+  status = 200
