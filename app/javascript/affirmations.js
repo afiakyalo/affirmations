@@ -1,7 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
   console.log("JavaScript is loaded and ready");
-  document.body.addEventListener("click", () => {
-    console.log("Body was clicked");
+
+  document.addEventListener("click", () => {
+    console.log("Document was clicked");
+
     // Fetch the next affirmation from the server
     fetch('/next_affirmation')
       .then(response => response.json())

@@ -14,9 +14,10 @@
  *= require_self
  */
 
+
  html, body {
     height: 100%;
-    margin: 20%;
+    margin: 10%;
     padding: 0;
     width: 100%;
     overflow-x: hidden;
@@ -24,7 +25,6 @@
   }
 
  p {
-    text-align: center;
     font-family: serif;
     font-size: xx-large;
     width: 250px;
@@ -36,4 +36,9 @@
     box-sizing: content-box;
     background-color: #fee557;
     justify-content: center;
+ }
+
+ #affirmation {
+   font-size: xx-large;
+   text-align:calc(50% - 50px);
  }

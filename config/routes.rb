@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root 'affirmations#index'
-  # get "affirmations/next"
-  get 'next_affirmation', to: 'affirmations#next'
+  get 'affirmations', to: 'affirmations#index', as: 'affirmations'
+  get 'next_affirmation', to: 'affirmations#next', as: 'next_affirmation'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
