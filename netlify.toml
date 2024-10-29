@@ -8,11 +8,5 @@
   # Node version (optional) - specify your Node version if necessary
   environment = { NODE_VERSION = "16.15.0" }
 
-# Add any environment variables required for your project
+  # Add any environment variables required for your project
   [build.environment]
-
-[[redirects]]
-  # Example redirect (optional): redirect all 404s to the index
-  from = "/*"
-  to = "/index.html"
-  status = 200
