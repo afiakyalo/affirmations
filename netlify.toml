@@ -7,6 +7,3 @@
 
   # Node version (optional) - specify your Node version if necessary
   environment = { NODE_VERSION = "16.15.0" }
-
-  # Add any environment variables required for your project
-  [build.environment]
