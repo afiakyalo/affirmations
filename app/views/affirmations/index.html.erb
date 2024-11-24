@@ -1,5 +1,14 @@
 <div class="card-container">
-  <div id="affirmation" class="card">
-    <p><%= @affirmation.content %></p>
+  <div>
+    <img src="<%= asset_path('acorn.png') %>" alt="acorn" class="asset">
+  </div>
+  <div id="affirmation" class="card outer-card">
+    <div class="card middle-card">
+      <div class="card inner-card">
+        <div id="affirmation">
+          <p><%= @affirmation.content %></p>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

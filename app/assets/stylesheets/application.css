@@ -14,55 +14,101 @@
  *= require_self
  */
 
+ html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  background: linear-gradient(to right, #ff7e5f, #feb47b); /* Example gradient */
+  font-family: 'Arial', sans-serif; /* Change the font family for a modern look */
+}
 
-  html, body{
-    height: 100%;
-    margin: 10%;
-    padding: 0;
-    width: 100%;
-    overflow-x: hidden;
-    overflow-y: hidden;
-  }
+/* Card container to center the card */
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+}
 
-  .card-container {
-    display: flex;
-    /* flex-wrap: wrap; */
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    background: linear-gradient(to right, #ff7e5f, #feb47b); /* Example gradient */
-  }
+/* Card styles */
+.card {
+  background: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+  border-radius: 10px; /* Rounded corners */
+  padding: 20px; /* Padding inside the card */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  text-align: center; /* Center the text */
+  width: 300px; /* Fixed width */
+  height: 300px; /* Fixed height */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  position: relative; /* Ensure positioning for layering */
+}
 
+/* Outer card styles */
+.outer-card {
+  background: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+  border: 2px solid rgba(0, 0, 0, 0.1); /* Border for outer card */
+  transform: translate(-50px, -50px); /* Offset for layering effect */
+}
+
+/* Middle card styles */
+.middle-card {
+  background: rgba(255, 255, 255, 0.9); /* Slightly different semi-transparent background */
+  border: 2px solid rgba(0, 0, 0, 0.1); /* Border for middle card */
+  transform: translate(20px, 20px); /* Offset for layering effect */
+}
+
+/* Inner card styles */
+.inner-card {
+  background: rgba(255, 255, 255, 0.9); /* Slightly different semi-transparent background */
+  border: 2px solid rgba(0, 0, 0, 0.1); /* Border for inner card */
+  transform: translate(20px, 20px); /* Offset for layering effect */
+}
+
+/* Asset styles */
+.asset {
+  max-width: 250px; /* Adjust the size of the asset */
+  padding: 100px;
+  /* margin-bottom: 10px; Space between the asset and the text */
+}
+
+/* Affirmation text styles */
+#affirmation p {
+  color: rgb(70, 67, 67);
+  font-size: 2em; /* Adjust the font size */
+  animation: fadeIn 0.5s ease-in-out; /* Apply the fade-in animation */
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Media queries for smaller screens */
+@media (max-width: 768px) {
   .card {
-    background: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
-    border-radius: 10px; /* Rounded corners */
-    padding: 20px; /* Padding inside the card */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    text-align: center; /* Center the text */
-    max-width: 400px; /* Limit the width */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }  
-
-  .card:hover {
-    transform: translateY(-10px); /* Slight lift on hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+    width: 90%; /* Adjust width for smaller screens */
+    height: auto; /* Allow height to adjust based on content */
+    padding: 10px; /* Reduce padding */
   }
 
-  p {
-    font-family: serif;
-    font-size: xx-large;
-    width: 250px;
-    height: 300px;
-  }
- 
-  body {
-    vertical-align: text-top;
-    box-sizing: content-box;
-    background-color: #fee557;
-    justify-content: center;
+  .outer-card, .middle-card, .inner-card {
+    transform: none; /* Remove layering effect on smaller screens */
+    border: none; /* Remove borders for a cleaner look */
   }
 
-  #affirmation {
-    font-size: xx-large;
-    text-align:calc(50% - 50px);
+  #affirmation p {
+    font-size: 1.2em; /* Adjust font size for smaller screens */
   }
+
+  .asset {
+    max-width: 80px; /* Adjust asset size for smaller screens */
+  }
+}
