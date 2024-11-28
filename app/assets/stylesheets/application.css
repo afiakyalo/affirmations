@@ -1,4 +1,4 @@
-/*
+/* 
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
  *
@@ -26,7 +26,7 @@
 }
 
 /* Card container to center the card */
-.card-container {
+.container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -72,8 +72,8 @@
 
 /* Asset styles */
 .asset {
-  max-width: 250px; /* Adjust the size of the asset */
-  padding: 100px;
+  max-width: 300px; /* Adjust the size of the asset */
+  /* padding: 80px; */
   /* margin-bottom: 10px; Space between the asset and the text */
 }
 
@@ -93,10 +93,17 @@
 
 /* Media queries for smaller screens */
 @media (max-width: 768px) {
+  .container {
+    flex-direction: column-reverse; /* Move image to the top on mobile devices */
+    justify-content: flex-end;
+  }
+
   .card {
     width: 90%; /* Adjust width for smaller screens */
     height: auto; /* Allow height to adjust based on content */
-    padding: 10px; /* Reduce padding */
+    /* padding: 10px; Reduce padding */
+    width: 300px; /* Fixed width */
+    height: 60%; /* Fixed height */
   }
 
   .outer-card, .middle-card, .inner-card {
@@ -105,10 +112,11 @@
   }
 
   #affirmation p {
-    font-size: 1.2em; /* Adjust font size for smaller screens */
+    font-size: auto; /* Adjust font size for smaller screens */
   }
 
   .asset {
-    max-width: 80px; /* Adjust asset size for smaller screens */
+    padding: 0px; /* Remove padding for a cleaner look */
+    max-width: 130px; /* Adjust asset size for smaller screens */
   }
 }
