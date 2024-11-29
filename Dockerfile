@@ -13,6 +13,7 @@ WORKDIR /rails
 
 # Install base packages
 RUN apt-get update -qq && \
+    apt-get install -y nodejs yarn \
     apt-get install --no-install-recommends -y curl libjemalloc2 libvips postgresql-client && \
     rm -rf /var/lib/apt/lists /var/cache/apt/archives
 
@@ -20,7 +21,8 @@ RUN apt-get update -qq && \
 ENV RAILS_ENV="production" \
     BUNDLE_DEPLOYMENT="1" \
     BUNDLE_PATH="/usr/local/bundle" \
-    BUNDLE_WITHOUT="development"
+    BUNDLE_WITHOUT="development" \
+    SECRET_KEY_BASE="77ac632eb184fe90738791fb420c7a2ce9906d5dc268b3ebcbb515b0304e0e647da0498af1138780a6d285da507fc67caa505f9f0d24955e3e84df7cff35ce5b"
 
 # Throw-away build stage to reduce size of final image
 FROM base AS build
@@ -43,9 +45,7 @@ COPY . .
 RUN bundle exec bootsnap precompile app/ lib/
 
 # Precompiling assets for production without requiring secret RAILS_MASTER_KEY
-RUN SECRET_KEY_BASE_DUMMY=1 ./bin/rails assets:precompile
-
-
+RUN "${SECRET_KEY_BASE}" ./bin/rails assets:precompile
 
 
 # Final stage for app image
