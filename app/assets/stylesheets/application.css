@@ -79,7 +79,7 @@
 
 /* Affirmation text styles */
 #affirmation p {
-  color: rgb(70, 67, 67,0.9);
+  color: rgba(70, 67, 67,0.9);
   font-size: 2em; /* Adjust the font size */
   animation: fadeIn 0.5s ease-in-out; /* Apply the fade-in animation */
   margin: 50px; /* Add margin for spacing */
