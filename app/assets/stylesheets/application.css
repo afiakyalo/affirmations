@@ -35,7 +35,7 @@
 
 /* Card styles */
 .card {
-  background:rgba(253, 235, 213); /* Semi-transparent background */
+  background:rgba(253, 235, 213, 0.9); /* Semi-transparent background */
   border-radius: 10px; /* Rounded corners */
   padding: 20px; /* Padding inside the card */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
@@ -65,7 +65,7 @@
 
 /* Inner card styles */
 .inner-card {
-  background: rgba(253, 235, 213); /* Slightly different semi-transparent background */
+  background: rgba(253, 235, 213, 0.9); /* Slightly different semi-transparent background */
   border: 2px solid rgba(0, 0, 0, 0.1); /* Border for inner card */
   transform: translate(20px, 20px); /* Offset for layering effect */
 }
@@ -79,7 +79,7 @@
 
 /* Affirmation text styles */
 #affirmation p {
-  color: rgb(70, 67, 67);
+  color: rgb(70, 67, 67,0.9);
   font-size: 2em; /* Adjust the font size */
   animation: fadeIn 0.5s ease-in-out; /* Apply the fade-in animation */
   margin: 50px; /* Add margin for spacing */
